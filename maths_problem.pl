@@ -26,7 +26,7 @@ use warnings;
 foreach my $a (1..9) {
 	foreach my $b (1..9) {
 		foreach my $c (1..9) {
-			foreach my $d (1..9) {
+				foreach my $d (1..9) {
 				my $ab = (10 * $a + $b);
 				my $cd = (10 * $c + $d);
 				# Calculate E, F
