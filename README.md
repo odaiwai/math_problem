@@ -56,7 +56,8 @@ for a in range(1,10): # all the numbers from one to nine.
 
 Not shown in that script are the subroutines max() and numbers_ok(), which determine the maximum number in a list and query if all numbers in a list are unique respectively.  They're in the Python Script: [math_problem.py][1], but contain a few language concepts which are probably a little complex for Python Neophytes, and not really relevant to solving the mathematics problem here.
 
-# Solutions - Brute Force
+## Solutions - Brute Force
+
 Here are all the possible solutions:
 <table>
 <tr><th> a</th><th> b</th><th> c</th><th> d</th><th> e</th><th> f</th><th> g</th><th> h</th><th> ppp</th></tr>
@@ -86,13 +87,15 @@ Here are all the possible solutions:
 <tr><td> 9</td><td> 4</td><td> 1</td><td> 8</td><td> 7</td><td> 6</td><td> 3</td><td> 5</td><td> 111</td></tr>
 <tr><td> 9</td><td> 5</td><td> 2</td><td> 7</td><td> 6</td><td> 8</td><td> 4</td><td> 3</td><td> 111</td></tr>
 </table>
-# Solutions - Analytical
+
+## Solutions - Analytical
 
 After solving it with the brute force method, it's pretty clear that P has to equal 1. In fact, if you think about it, you need to have each column (i.e. B - D + H) equal to 1 or 11 for the first column, and 11 for the second column for the whole thing to work.
 
 The solution is somewhere within (0-99) - (0-99) + (0-99), and so can't be much greater than 100. Just to think of a maximum number, 98-12+75 = 161, so we clearly can't get to 200+, and therefore, the only possible solution is 111. (If we allow 0 as a possible number, there are a lot more possible solutions.)
 
 This is a clear example of how the Brute Force method can assist with analysing the problem to see if there's an Analytical Method to be discovered.
-# Opinion
+
+## Opinion
 
 This problem is directed at primary school children in Hong Kong, and that is symptomatic of the disturbing trends in Hong Kong Education.  It is completely unreasonable to expect a primary school child to possess the analytical skills to solve this problem, and it is, quite frankly, beyond the skills of most educated Hong Kong adults too.  The programming mindset is quite rare, and problem solving is not a skill that is developed or rewarded.
