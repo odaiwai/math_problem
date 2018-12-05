@@ -16,6 +16,7 @@
 
 # subroutines come first in Python
 # Step through a list, and return the maximum element
+
 def max(list = []):
 	max = list[0]
 	for num in list:
@@ -24,6 +25,7 @@ def max(list = []):
 	return max
 	
 # step through a list and return 1 if all numbers are unique, 0 otherwise
+
 def numbers_ok(list = []):
 	result = 1
 	count = {} # this defines an empty dictionary

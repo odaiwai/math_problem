@@ -95,7 +95,3 @@ After solving it with the brute force method, it's pretty clear that P has to eq
 The solution is somewhere within (0-99) - (0-99) + (0-99), and so can't be much greater than 100. Just to think of a maximum number, 98-12+75 = 161, so we clearly can't get to 200+, and therefore, the only possible solution is 111. (If we allow 0 as a possible number, there are a lot more possible solutions.)
 
 This is a clear example of how the Brute Force method can assist with analysing the problem to see if there's an Analytical Method to be discovered.
-
-## Opinion
-
-This problem is directed at primary school children in Hong Kong, and that is symptomatic of the disturbing trends in Hong Kong Education.  It is completely unreasonable to expect a primary school child to possess the analytical skills to solve this problem, and it is, quite frankly, beyond the skills of most educated Hong Kong adults too.  The programming mindset is quite rare, and problem solving is not a skill that is developed or rewarded.
