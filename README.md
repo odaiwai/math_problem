@@ -29,7 +29,7 @@ The brute force method is actually pretty simple:
 
 The 'solution space', i.e. all the possible tests we have to run, is fairly small as brute force problems go. The total possible options we need to consider are 9^6 or 531,441 possible states for six numbers. It's actually less than that, as we only consider the unique values from the six numbers, which is ( 9 C 6 ) in probability terms (9!/6!) or 504 possible combinations. Even considering all 531,000, this is a fairly trivial problem to solve with a brute force method for modern computers.
 
-A more detailed algorithm is shown below. This is actually a [Python][http://www.python.org] script, but Python is well known for being 'pseudo-code' masquerading as a language...
+A more detailed algorithm is shown below. This is actually a [Python](http://www.python.org) script, but Python is well known for being 'pseudo-code' masquerading as a language...
 
 I've added some comments, and (as is normal with Python) the indentation is important.
 
@@ -39,7 +39,8 @@ for a in range(1,10): # all the numbers from one to nine.
 		for c in range(1,10):
 			for d in range(1,10):
 				ef = (10*a+b) - (10*c+d)
-				# make a character string of the answer: three places integer with sign
+				# make a character string of the answer: 
+				# three places integer with sign
 				ef_char = '{:+03d}'.format(ef)
 				e = int(ef_char[1])
 				f = int(ef_char[2])
@@ -49,10 +50,11 @@ for a in range(1,10): # all the numbers from one to nine.
 						ppp_char = '{:+04d}'.format(ppp)
 						if numbers_ok([a, b, c, d, e, f, g, h]):
 							if (ppp_char[1] == ppp_char[2] == ppp_char[3]):
-								print 'solution: ', a, b, c, d, e, f, g, h, ppp
+								print('solution: ', a, b, c, d, e, f, g, h, ppp)
 ````
 
-Not shown in that script are the subroutines max() and numbers_ok(), which determine the maximum number in a list and query if all numbers in a list are unique respectively.  They're in the Python Script: [math_problem.py][1], but contain a few language concepts which are probably a little complex for Python Neophytes, and not really relevant to solving the mathematics problem here.
+Not shown in that script are the subroutines max() and numbers_ok(), which determine the maximum number in a list and query if all numbers in a list are unique respectively.  They're in the Python Script: math_problem.py but are not really relevant to solving the mathematics problem here.
+
 
 ## Solutions - Brute Force
 
