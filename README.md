@@ -29,8 +29,6 @@ The brute force method is actually pretty simple:
 
 The 'solution space', i.e. all the possible tests we have to run, is fairly small as brute force problems go. The total possible options we need to consider are 9^6 or 531,441 possible states for six numbers. It's actually less than that, as we only consider the unique values from the six numbers, which is ( 9 C 6 ) in probability terms (9!/6!) or 504 possible combinations. Even considering all 531,000, this is a fairly trivial problem to solve with a brute force method for modern computers.
 
-A [Perl][http://www.perl.org] script to solve this problem can be found here: [Solve Math Problem][]
-
 A more detailed algorithm is shown below. This is actually a [Python][http://www.python.org] script, but Python is well known for being 'pseudo-code' masquerading as a language...
 
 I've added some comments, and (as is normal with Python) the indentation is important.
