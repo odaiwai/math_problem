@@ -34,26 +34,25 @@ A more detailed algorithm is shown below. This is actually a [Python](http://www
 I've added some comments, and (as is normal with Python) the indentation is important.
 
 ````python
-for a in range(1,10): # all the numbers from one to nine.
-	for b in range(1,10):
-		for c in range(1,10):
-			for d in range(1,10):
-				ef = (10*a+b) - (10*c+d)
-				# make a character string of the answer: 
-				# three places integer with sign
-				ef_char = '{:+03d}'.format(ef)
-				e = int(ef_char[1])
-				f = int(ef_char[2])
-				for g in range(1,10):
-					for h in range(1,10):
-						ppp = ef + (10 * g + h)
-						ppp_char = '{:+04d}'.format(ppp)
-						if numbers_ok([a, b, c, d, e, f, g, h]):
-							if (ppp_char[1] == ppp_char[2] == ppp_char[3]):
-								print('solution: ', a, b, c, d, e, f, g, h, ppp)
+def main():
+    """
+    Main part
+    """
+    for a, b, c, d, g, h in permutations(range(1, 10), 6):
+        ef = (10*a+b) - (10*c+d)
+        # make a character string of the answer:
+        #  three places integer with sign
+        ef_char = '{:+03d}'.format(ef)
+        e = int(ef_char[1])
+        f = int(ef_char[2])
+        ppp = ef + (10 * g + h)
+        ppp_char = '{:+04d}'.format(ppp)
+        if numbers_ok([a, b, c, d, e, f, g, h]):
+            if (ppp_char[1] == ppp_char[2] == ppp_char[3]):
+                print('solution: ', a, b, c, d, e, f, g, h, ppp)
 ````
 
-Not shown in that script are the subroutines max() and numbers_ok(), which determine the maximum number in a list and query if all numbers in a list are unique respectively.  They're in the Python Script: math_problem.py but are not really relevant to solving the mathematics problem here.
+Not shown in that script is the subroutine numbers_ok(), which determine if all numbers in a list are unique respectively. 
 
 
 ## Solutions - Brute Force
@@ -97,4 +96,5 @@ The solution is somewhere within (0-99) - (0-99) + (0-99), and so can't be much 
 This is a clear example of how the Brute Force method can assist with analysing the problem to see if there's an Analytical Method to be discovered.
 
 ## Update
-Finally updated the python code to be more Pythonic and use [permutations](https://docs.python.org/3/library/itertools.html#itertools.permutations) from [itertools](https://docs.python.org/3/library/itertools.html).
+Finally updated the python code to be more Pythonic and use [permutations](https://docs.python.org/3/library/itertools.html#itertools.permutations) from [itertools](https://docs.python.org/3/library/itertools.html). Using a generator to yield all possible permutations of 6 numbers from 9 is much more elegant than excessive indenting.
+
