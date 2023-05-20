@@ -17,17 +17,6 @@ e.g. AB = 21, if A=2, B=1
 from itertools import permutations
 
 
-def max(numbers: list) -> int:
-    """
-    Step through a list, and return the maximum element
-    """
-    max = numbers.pop(0)  # Take the first element
-    for num in numbers:
-        if num > max:
-            max = num       # if the current number is > max, it becomes max
-    return max(numbers)
-
-
 def numbers_ok(numbers: list) -> bool:
     """
     step through a list and return True if all numbers are unique,
